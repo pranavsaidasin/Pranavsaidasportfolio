@@ -3,13 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pranavsaidasin.github.io/Pranavsaidasportfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -31,7 +29,6 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7",
-    "vite": "^5.3.4",
-    "gh-pages": "^6.0.0"
+    "vite": "^5.3.4"
   }
 }
