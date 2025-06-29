@@ -45,15 +45,22 @@ export const Contact = () => {
           }
         )
         .then(
-          () => {
-            toast("Message Successfully Forwarded", {
-              autoClose: 5000,
-              type: "success",
-              position: "top-right",
-            });
-            helper.resetForm();
-            formRef.current.reset();
-          },
+  () => {
+    // ✅ Push event to GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "form_submit",
+      form_name: "contact"
+    });
+
+    toast("Message Successfully Forwarded", {
+      autoClose: 5000,
+      type: "success",
+      position: "top-right",
+    });
+    helper.resetForm();
+    formRef.current.reset();
+  },
           () => {
             toast("Something Went Wrong, Please Try Again", {
               autoClose: 5000,
